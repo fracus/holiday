@@ -47,7 +47,8 @@
           <% if user_signed_in? %>
               <div class="nav-collapse collapse">
                 <ul class="nav">
-                 
+
+
                   <li><%= link_to "Mis Feriados", feriados_path %></li>
                   <li><%= link_to("Cerrar Sesión", destroy_user_session_path, :method =>:delete) %></li>
                   <li class="dropdown">
@@ -65,22 +66,22 @@
                 </ul>
 
 
+                <%= form_for @user, :url => user_session do |f| %>
+                  
+                  <%= f.email_field :user, :address %>
+                  <%= f.label, :email %> 
+                  
+                  <%= f.password_field :password %>
+                  <%= f.label , :password%>
 
-                <%= form_for @user ,:url => user_session do |f| %>
-                    <%= f.label :email %>:
-                    <%= f.text_field :email %><br />
-
-                    <%= f.label :password %>:
-                    <%= f.password_field :password %><br />
-
-                    <%= f.submit %>
-                  <% end %>
-
+                <%end %>
 
 
-
-
-
+                <form class="navbar-form pull-right">
+                  <input class="span2" type="text" placeholder="Email">
+                  <input class="span2" type="password" placeholder="Password">
+                  <button type="submit" class="btn">Sign in</button>
+                </form>
               </div><!--/.nav-collapse -->
           <%end%>    
         </div>
@@ -112,4 +113,5 @@
     <script src="./Bootstrap, from Twitter_files/bootstrap-typeahead.js"></script>
 
 </body></html>
+
 

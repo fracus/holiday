@@ -1,0 +1,30 @@
+              home_index GET    /home/index(.:format)          home#index
+                    root        /                              home#index
+        new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
+            user_session POST   /users/sign_in(.:format)       devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
+           user_password POST   /users/password(.:format)      devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)  devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
+                         PUT    /users/password(.:format)      devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
+       user_registration POST   /users(.:format)               devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
+                         PUT    /users(.:format)               devise/registrations#update
+                         DELETE /users(.:format)               devise/registrations#destroy
+                clientes GET    /clientes(.:format)            clientes#index
+                         POST   /clientes(.:format)            clientes#create
+             new_cliente GET    /clientes/new(.:format)        clientes#new
+            edit_cliente GET    /clientes/:id/edit(.:format)   clientes#edit
+                 cliente GET    /clientes/:id(.:format)        clientes#show
+                         PUT    /clientes/:id(.:format)        clientes#update
+                         DELETE /clientes/:id(.:format)        clientes#destroy
+                feriados GET    /feriados(.:format)            feriados#index
+                         POST   /feriados(.:format)            feriados#create
+             new_feriado GET    /feriados/new(.:format)        feriados#new
+            edit_feriado GET    /feriados/:id/edit(.:format)   feriados#edit
+                 feriado GET    /feriados/:id(.:format)        feriados#show
+                         PUT    /feriados/:id(.:format)        feriados#update
+                         DELETE /feriados/:id(.:format)        feriados#destroy
+                    root        /                              home#index

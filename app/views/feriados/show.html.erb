@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @feriado.description %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @feriado.fecha %>
+</p>
+
+
+<%= link_to 'Editar', edit_feriado_path(@feriado) %> |
+<%= link_to 'Back', feriados_path %>
